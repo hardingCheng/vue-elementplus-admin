@@ -10,20 +10,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-plus": "^1.0.2-beta.28",
     "vue": "^3.2.22",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,vue}": [
-      "eslint --fix",
-      "git add"
-    ]
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
@@ -45,6 +35,18 @@
     "eslint-plugin-vue": "^7.0.0",
     "husky": "7.0.1",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-element-plus": "~0.0.13"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
