@@ -12,7 +12,9 @@
     "axios": "^0.24.0",
     "core-js": "^3.6.5",
     "element-plus": "^1.0.2-beta.28",
+    "eslint-plugin-prettier": "^4.0.0",
     "md5": "^2.3.0",
+    "prettier-eslint": "^13.0.0",
     "vue": "^3.2.22",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"

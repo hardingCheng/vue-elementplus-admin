@@ -1,28 +1,35 @@
 // user.js 模块，用于处理所有和 用户相关 的内容
 //
 import {
-  login
+  login,
+  getUserInfo
 } from '@/api/sys'
 import md5 from 'md5'
 import {
   setItem,
-  getItem
+  getItem,
+  removeAllItem
 } from '@/utils/storage'
 import {
   TOKEN
 } from '@/constant'
+import {
+  setTimeStamp
+} from '@/utils/auth'
 import router from '@/router'
 export default {
   namespaced: true,
   state: () => ({
-    state: () => ({
-      token: getItem(TOKEN) || ''
-    })
+    token: getItem(TOKEN) || '',
+    userInfo: {}
   }),
   mutations: {
     setToken (state, token) {
       state.token = token
       setItem(TOKEN, token)
+    },
+    setUserInfo (state, userInfo) {
+      state.userInfo = userInfo
     }
   },
   actions: {
@@ -45,6 +52,8 @@ export default {
         })
           .then(data => {
             this.commit('user/setToken', data.token)
+            // 保存登录时间
+            setTimeStamp()
             router.push('/')
             resolve()
           })
@@ -52,6 +61,17 @@ export default {
             reject(err)
           })
       })
+    },
+    async getUserInfo (context, userInfo) {
+      const res = await getUserInfo()
+      this.commit('user/setUserInfo', res)
+      return res
+    },
+    logout () {
+      this.commit('user/setToken', '')
+      this.commit('user/setUserInfo', {})
+      removeAllItem()
+      router.push('/login')
     }
   }
 }
