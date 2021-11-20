@@ -49,3 +49,7 @@ https://www.conventionalcommits.org/
 ```js
 <script setup">
 ```
+
+### 组件状态驱动的动态 CSS 值
+
+https://v3.vuejs.org/api/sfc-style.html#state-driven-dynamic-css
