@@ -10,7 +10,6 @@
   <svg v-else class="svg-icon" :class="className" aria-hidden="true">
     <use :xlink:href="iconName" />
   </svg>
-  <div></div>
 </template>
 <script setup>
 import { isExternal as external } from '@/utils/validata'
