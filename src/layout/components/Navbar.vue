@@ -5,6 +5,9 @@
     <!-- 面包屑 -->
     <breadcrumb class="breadcrumb-container" />
     <div class="right-menu">
+      <!-- 换肤 -->
+      <theme-picker class="right-menu-item hover-effect"></theme-picker>
+      <!-- 国际化 -->
       <lang-select class="right-menu-item hover-effect" />
       <!-- 头像 -->
       <el-dropdown trigger="click" class="avatar-container">
@@ -37,6 +40,7 @@
 <script setup>
 import {} from 'vue'
 import { useStore } from 'vuex'
+import ThemePicker from '@/components/ThemeSelect/index'
 import Hamburger from '@/components/Hamburger/index'
 import Breadcrumb from '@/components/Breadcrumb/index'
 import LangSelect from '@/components/LangSelect'
