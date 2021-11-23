@@ -1,6 +1,6 @@
 const path = require('path')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, dir)
 }
 // 使用 svg-sprite-loader 处理 svg 图标
@@ -18,7 +18,7 @@ module.exports = {
       }
     }
   },
-  chainWebpack (config) {
+  chainWebpack(config) {
     // 设置 svg-sprite-loader
     config.module
       .rule('svg')

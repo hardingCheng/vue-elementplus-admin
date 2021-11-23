@@ -5,6 +5,8 @@
     <!-- 面包屑 -->
     <breadcrumb class="breadcrumb-container" />
     <div class="right-menu">
+      <!-- 全屏 -->
+      <screenfull class="right-menu-item hover-effect" />
       <!-- 换肤 -->
       <theme-picker class="right-menu-item hover-effect"></theme-picker>
       <!-- 国际化 -->
@@ -44,6 +46,7 @@ import ThemePicker from '@/components/ThemeSelect/index'
 import Hamburger from '@/components/Hamburger/index'
 import Breadcrumb from '@/components/Breadcrumb/index'
 import LangSelect from '@/components/LangSelect'
+import Screenfull from '@/components/Screenfull'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
