@@ -15,7 +15,6 @@ const getters = {
    * @returns true 表示已存在用户信息
    */
   hasUserInfo: state => {
-    console.log(state.user)
     return JSON.stringify(state.user.userInfo) !== '{}'
   },
   cssVar: state => {

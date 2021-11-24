@@ -5,6 +5,8 @@
     <!-- 面包屑 -->
     <breadcrumb class="breadcrumb-container" />
     <div class="right-menu">
+      <!-- 搜索 -->
+      <header-search class="right-menu-item hover-effect"></header-search>
       <!-- 全屏 -->
       <screenfull class="right-menu-item hover-effect" />
       <!-- 换肤 -->
@@ -47,6 +49,7 @@ import Hamburger from '@/components/Hamburger/index'
 import Breadcrumb from '@/components/Breadcrumb/index'
 import LangSelect from '@/components/LangSelect'
 import Screenfull from '@/components/Screenfull'
+import HeaderSearch from '@/components/HeaderSearch'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
