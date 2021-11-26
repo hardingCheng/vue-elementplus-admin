@@ -3,8 +3,10 @@
     <!-- 汉堡 -->
     <hamburger class="hamburger-container" />
     <!-- 面包屑 -->
-    <breadcrumb class="breadcrumb-container" />
+    <breadcrumb id="guide-breadcrumb" class="breadcrumb-container" />
     <div class="right-menu">
+      <!-- 功能引导 -->
+      <guide class="right-menu-item hover-effect"></guide>
       <!-- 搜索 -->
       <header-search class="right-menu-item hover-effect"></header-search>
       <!-- 全屏 -->
@@ -50,6 +52,7 @@ import Breadcrumb from '@/components/Breadcrumb/index'
 import LangSelect from '@/components/LangSelect'
 import Screenfull from '@/components/Screenfull'
 import HeaderSearch from '@/components/HeaderSearch'
+import Guide from '@/components/Guide'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')

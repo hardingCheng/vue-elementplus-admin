@@ -1,6 +1,6 @@
 <template>
   <div class="header-search" :class="{ show: isShow }">
-    <span @click.stop="onShowClick">
+    <span id="guide-search" @click.stop="onShowClick">
       <svg-icon class-name="search-icon" icon="search" />
     </span>
     <el-select
