@@ -55,6 +55,8 @@ service.interceptors.request.use(
       // 如果token存在 注入token
       config.headers.Authorization = `Bearer ${store.getters.token}`
     }
+    // 配置接口国际化
+    config.headers['Accept-Language'] = store.getters.language
     return config // 必须返回配置
   },
   error => {
