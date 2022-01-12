@@ -5,7 +5,7 @@
 // 那么在列表中的时间处理部分，在 vue2 时代通常我们都是通过 全局过滤器 来进行实现的，所以在 vue3 中我们就顺理成章的通过 全局属性 替代实现
 import dayjs from 'dayjs'
 
-const dateFilter = (val, format = 'YYYY-MM-DD') => {
+export const dateFilter = (val, format = 'YYYY-MM-DD') => {
   if (!isNaN(val)) {
     val = parseInt(val)
   }

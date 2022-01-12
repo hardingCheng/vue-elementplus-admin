@@ -5,7 +5,7 @@
         <el-button type="primary" @click="onImportExcelClick">
           {{ $t('msg.excel.importExcel') }}</el-button
         >
-        <el-button type="success">
+        <el-button type="success" @click="onToExcelClick">
           {{ $t('msg.excel.exportExcel') }}
         </el-button>
       </div>
@@ -74,6 +74,7 @@
       >
       </el-pagination>
     </el-card>
+    <export-to-excel v-model="exportToExcelVisible"></export-to-excel>
   </div>
 </template>
 <script setup>
@@ -83,6 +84,7 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { getUserManageList, deleteUser } from '@/api/user-manage'
 import { watchSwitchLang } from '@/utils/i18n'
+import ExportToExcel from './components/Export2Excel.vue'
 // 数据相关
 const tableData = ref([])
 const total = ref(0)
@@ -143,6 +145,13 @@ const onRemoveClick = (row) => {
     // 重新渲染数据
     getListData()
   })
+}
+/**
+ * excel 导出点击事件
+ */
+const exportToExcelVisible = ref(false)
+const onToExcelClick = () => {
+  exportToExcelVisible.value = true
 }
 // 返回用户列表之后，数据不会自动刷新：
 // 出现该问题的原因是因为：appmain 中使用 keepAlive 进行了组件缓存。
