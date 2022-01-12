@@ -49,9 +49,10 @@
           width="260"
         >
           <template #default>
-            <el-button type="primary" size="mini">{{
-              $t('msg.excel.show')
-            }}</el-button>
+            <el-button type="primary" size="mini" @click="onShowClick(row._id)">
+              {{ $t('msg.excel.show') }}
+            </el-button>
+
             <el-button type="info" size="mini">{{
               $t('msg.excel.showRole')
             }}</el-button>
@@ -152,6 +153,12 @@ const onRemoveClick = (row) => {
 const exportToExcelVisible = ref(false)
 const onToExcelClick = () => {
   exportToExcelVisible.value = true
+}
+/**
+ * 查看按钮点击事件
+ */
+const onShowClick = (id) => {
+  router.push(`/user/info/${id}`)
 }
 // 返回用户列表之后，数据不会自动刷新：
 // 出现该问题的原因是因为：appmain 中使用 keepAlive 进行了组件缓存。
