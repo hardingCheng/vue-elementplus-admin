@@ -7,7 +7,8 @@ import UploadExcel from '@/components/UploadExcel'
 import { USER_RELATIONS, formatDate } from './utils'
 import { userBatchImport } from '@/api/user-manage'
 import { ElMessage } from 'element-plus'
-import { useI18n, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 /**
  * 筛选数据
  */
