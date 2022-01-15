@@ -53,3 +53,10 @@ https://www.conventionalcommits.org/
 ### 组件状态驱动的动态 CSS 值
 
 https://v3.vuejs.org/api/sfc-style.html#state-driven-dynamic-css
+
+### 处理 keep-alive 数据不加载
+
+```js
+// 处理数据不重新加载的问题
+onActivated(getListData)
+```
